@@ -1,5 +1,6 @@
 # Reproducible Data Science with Docker
 - As presented at [https://www.meetup.com/Docker-Dublin/events/247314882/](https://www.meetup.com/Docker-Dublin/events/247314882/)
+- ASCIINEMA DEMO: [https://asciinema.org/a/165285](https://asciinema.org/a/165285)
 
 # Docker image:
 -  The final image built by this demo can be found at: [https://hub.docker.com/r/cmihai/jupyter/](https://hub.docker.com/r/cmihai/jupyter/)
