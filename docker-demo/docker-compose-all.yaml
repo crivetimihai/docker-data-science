@@ -1,0 +1,42 @@
+version: '3.1'
+services:
+  jupyter:
+    image: cmihai/jupyter
+    container_name: jupyter_notebook
+    volumes:
+      - './notebooks:/notebooks'
+    ports:
+      - '9000:9000'
+    links:
+      - redis
+      - ceph
+      - mongo
+
+  redis:
+    image: 'redis:alpine'
+    container_name: jupyter_redis
+    volumes:
+     - redisdata:/data
+
+  postgres:
+    image: postgres
+    container_name: jupyter_postgres
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+     - pgdata:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo
+    volumes:
+     - mongodata:/data/db
+
+  ceph:
+    image: ceph/daemon
+    container_name: jupyter_ceph
+
+volumes:
+  redisdata:
+  pgdata:
+  mongodata:
+

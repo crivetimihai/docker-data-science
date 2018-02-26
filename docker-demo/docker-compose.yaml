@@ -1,0 +1,13 @@
+jupyter:
+   image: cmihai/jupyter-lite:v1
+   container_name: jupyter
+   volumes:
+    - ./notebooks:/notebooks
+   ports:
+    - '9000:9000'
+   links:
+    - redis
+
+redis:
+   image: redis:alpine
+   container_name: redis
