@@ -1,6 +1,7 @@
 # Reproducible Data Science with Docker
 - As presented at [https://www.meetup.com/Docker-Dublin/events/247314882/](https://www.meetup.com/Docker-Dublin/events/247314882/)
 - ASCIINEMA DEMO: [https://asciinema.org/a/165285](https://asciinema.org/a/165285)
+- Commandline Interactive Tutorial / Demo (as recorded above) can be found in [./docker-demo](docker-demo). Entry point is `menu.sh`. Requires `dialog`, `figlet` and `docker` (can be installed using `docker-demo/tools/install-docker-ubuntu.sh`)
 
 # Docker image:
 -  The final image built by this demo can be found at: [https://hub.docker.com/r/cmihai/jupyter/](https://hub.docker.com/r/cmihai/jupyter/)
