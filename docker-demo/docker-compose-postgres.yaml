@@ -2,7 +2,7 @@ version: '3.1'
 services:
     jupyter:
         image: cmihai/jupyter
-        container_name: jupyter_notebook
+        container_name: jupyter
         volumes:
             - './notebooks:/notebooks'
         ports:
@@ -13,17 +13,18 @@ services:
 
     postgres:
         image: postgres
-        container_name: jupyter_postgres
+        container_name: postgres
         ports:
             - '5432:5432'
         environment:
+            POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
         volumes:
             - pgdata:/var/lib/postgresql/data
 
     mongo:
         image: mongo
-        container_name: jupyter_mongo
+        container_name: mongo
         ports:
             - '27017:27017'
         volumes:
@@ -31,7 +32,7 @@ services:
 
     pgadmin4:
         image: fenglc/pgadmin4
-        container_name: jupyter_pgadmin4
+        container_name: pgadmin4
         ports:
             - '5050:5050'
         environment:
@@ -43,4 +44,3 @@ services:
 volumes:
   pgdata:
   mongodata:
-

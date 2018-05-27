@@ -39,4 +39,3 @@ volumes:
   redisdata:
   pgdata:
   mongodata:
-
