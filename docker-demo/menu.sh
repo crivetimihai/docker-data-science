@@ -68,6 +68,7 @@ dialog --clear --backtitle "${TITLE}" \
 "" "" \
 "FINAL" "Closing Remarks, Questions and Answers" \
 "8.build" "Final build and upload to Docker Hub" \
+"9.postgres" "PostgreSQL, PGAdmin4 and docker-compose" \
 "" "" \
 "EXIT" "Exit to the shell" 2>"${INPUT}"
 
@@ -96,6 +97,7 @@ case $menuitem in
 
     "FINAL") ./FINAL.sh; read;;
     "8.build") ./08.build.sh; read;;
+    "9.postgres") ./09.postgres.sh; read;;
 
     "EXIT") echo "So long, and thanks for all the fish!"; break;;
 esac
