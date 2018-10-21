@@ -13,7 +13,7 @@
 #                                   CONFIGURATION
 #==============================================================================
 ## List of Linux packages to install with 'apt-get'
-OS_PACKAGES='wget curl bzip2 build-essential git sqlite3 tmux mc graphviz vim bash-completion command-not-found'
+OS_PACKAGES='wget curl bzip2 build-essential git sqlite3 tmux mc graphviz vim-nox bash-completion command-not-found'
 
 ## Set noninteractive frontend during build process..
 export DEBIAN_FRONTEND=noninteractive
