@@ -29,7 +29,7 @@
 PIP_PACKAGES='jupyter numpy pandas statsmodels matplotlib matplotlib_venn requests scrapy xlrd nltk autopep8 pylint redis psycopg2-binary pprint graphviz iplantuml'
 
 ## List of packages to install with 'conda' (jupyter extensions, etc. that require extra config when using pip)
-CONDA_PACKAGES='ipywidgets beakerx jupyter_contrib_nbextensions jupyter_nbextensions_configurator jupyterlab'
+CONDA_PACKAGES='ipywidgets beakerx jupyter_contrib_nbextensions jupyter_nbextensions_configurator jupyterlab scikit-learn'
 
 ## URL to Anaconda distribution to install. Here, we use 'miniconda', a light weight version of anaconda.
 ANACONDA_URL='https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh'
