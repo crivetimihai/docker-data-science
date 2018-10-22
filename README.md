@@ -1,7 +1,8 @@
 # Workshop pre-requisites:
 
 ## Install Docker
-Follow the instructions at https://docs.docker.com/install/ to install and configure Docker.
+Follow the instructions at https://docs.docker.com/install/ (for Windows/Linux/MacOS) to install and configure Docker CE.
+
 On most systems, you can use the `get-docker` script to install Docker. On Ubuntu / Debian, it looks like this:
 
 ```
