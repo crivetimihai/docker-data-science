@@ -1,15 +1,46 @@
+# Workshop pre-requisites:
+
+## Install Docker
+Follow the instructions at https://docs.docker.com/install/ to install and configure Docker.
+On most systems, you can use the `get-docker` script to install Docker. On Ubuntu / Debian, it looks like this:
+
+```
+# Update your OS packages
+sudo apt-get update
+
+# Install curl
+sudo apt-get -y install curl
+
+# Download the get-docker.sh script
+curl -fsSL get.docker.com -o get-docker.sh
+
+# Run the installer script
+sudo sh get-docker.sh
+
+# Setup the Docker user
+sudo usermod -aG docker $USER
+
+# Install docker-compose..
+pip install docker-compose
+
+# Grab a few images
+docker pull ubuntu
+docker pull alpine
+docker pull postgres
+docker pull alpine
+```
+
 # Reproducible Data Science with Docker
-- As presented at [https://www.meetup.com/Docker-Dublin/events/247314882/](https://www.meetup.com/Docker-Dublin/events/247314882/)
 - ASCIINEMA DEMO: [https://asciinema.org/a/165285](https://asciinema.org/a/165285)
 - Commandline Interactive Tutorial / Demo (as recorded above) can be found in [./docker-demo](docker-demo). Entry point is `menu.sh`. Requires `dialog`, `figlet` and `docker` (can be installed using `docker-demo/tools/install-docker-ubuntu.sh`)
 
-# Docker image:
+## Docker image:
 -  The final image built by this demo can be found at: [https://hub.docker.com/r/cmihai/jupyter/](https://hub.docker.com/r/cmihai/jupyter/)
 
-# Docker Compose file and scripts
+## Docker Compose file and scripts
 - Source can be found here: [https://github.com/crivetimihai/docker-data-science](https://github.com/crivetimihai/docker-data-science)
 
-# How to run the image:
+## How to run the image:
 
 - This image has been published as cmihai/jupyter. Just do a:
 ```
@@ -20,13 +51,6 @@ docker run --init --detach \
     --volume ${HOME}/notebooks:/home/jupyter/notebooks:rw \
     --volume ${HOME}/.jupyter:/home/jupyter/.jupyter \
     cmihai/jupyter
-```
-
-# Alternative Images:
-https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook is quite popular.. you can use that instead.
-
-```
-docker run -it --rm -p 8888:8888 jupyter/datascience-notebook
 ```
 
 # Reference and where to learn more:
