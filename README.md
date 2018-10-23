@@ -8,6 +8,7 @@ On most systems, you can use the `get-docker` script to install Docker. On Ubunt
 ```
 # Update your OS packages
 sudo apt-get update
+sudo apt-get upgrade
 
 # Install curl
 sudo apt-get -y install curl
@@ -21,8 +22,10 @@ sudo sh get-docker.sh
 # Setup the Docker user
 sudo usermod -aG docker $USER
 
-# Install docker-compose..
+# Install docker-compose. May want to Anaconda Python or pip beforehand
 pip install docker-compose
+
+# Logout / login..
 
 # Grab a few images
 docker pull ubuntu

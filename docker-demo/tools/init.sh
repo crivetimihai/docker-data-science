@@ -39,7 +39,7 @@ logo(){
              \    \         __/
               \____\_______/
 
-           - DOCKER DUBLIN 2018 -
+              - DUBLIN 2018 -
 EOF
 }
 
